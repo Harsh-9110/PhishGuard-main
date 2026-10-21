@@ -1,0 +1,2 @@
+# Compatibility entrypoint; production adapter pins live in requirements.txt.
+-r requirements.txt

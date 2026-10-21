@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://pypi.org/simple/flask/",
+    "error": "HTTPError",
+    "status": 403
+  },
+  {
+    "url": "https://pypi.python.org/simple/flask/",
+    "error": "HTTPError",
+    "status": 403
+  },
+  {
+    "url": "https://raw.githubusercontent.com/pallets/flask/main/pyproject.toml",
+    "error": "HTTPError",
+    "status": 403
+  }
+]

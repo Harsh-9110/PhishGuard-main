@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard",
+  "version": "1.0.0",
+  "description": "Inspect the current website using your PhishGuard API.",
+  "permissions": ["activeTab", "storage"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "action": {"default_popup": "popup.html", "default_title": "Check with PhishGuard"},
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'"}
+}

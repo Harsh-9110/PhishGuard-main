@@ -1,0 +1,62 @@
+Executed verification for the repaired product
+
+Offline training:
+  OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 python -u train.py
+  Result: exit 0, 69,768 training rows, 17,441 held-out rows,
+  3 grouped cross-validation folds, 0 overlapping selected-feature groups.
+  Three actual sklearn models: Decision Tree, Random Forest, Gradient Boosting.
+  JSON export compared against sklearn on every held-out row; maximum absolute
+  probability error 6.661338147750939e-16. See training.log and artifacts/url-v1/metrics.json.
+
+Clean-venv execution:
+  .venv/bin/python -m unittest discover -s tests -v
+  Result: Ran 61 tests in 3.020s; OK (skipped=2): 59 passed.
+  Skipped: real Flask adapter (package unavailable), live PostgreSQL (no rotated
+  test database supplied). No mocked Flask/XGBoost packages were installed.
+  The clean venv contains only pip; see runtime-packages.json.
+
+Documented startup smoke, executed by tests/test_launch.py:
+  Python subprocess launched main.py --port <available-local-port>, waited for
+  health readiness, then executed scripts/smoke.py against that process.
+  /healthz 200
+  / 200
+  /static/app.js 200
+  /static/style.css 200
+  /api/model-info 200
+  /api/check rejects non-web URL: 400
+  See tests.log for complete real output and exact response byte counts.
+  An earlier cross-command standalone attempt received ConnectionRefused;
+  its full traceback is retained in initial-smoke-connection-failure.log.
+
+Database:
+  .venv/bin/python connect_db.py --check
+  Result: exit 0; actual SQLite connectivity and idempotent migration.
+  The suite also tests commit/rollback, persistence, owner isolation, SQL-bound
+  parameters, atomic concurrent limits, and a data-preserving column upgrade.
+  PostgreSQL uses window_id rather than the reserved WINDOW keyword; real
+  PostgreSQL execution remains explicitly unverified in this environment.
+
+Real HTTP integration:
+  Two loopback servers serve local legitimate/phishing-like HTML fixtures and
+  the application. The test transport pins a validated public address to the
+  fixture server; responses and verdicts are not stubbed. Production protection
+  is never disabled. Real HTTP is also sent through api/index.py's handler.
+
+Syntax/configuration:
+  Python compileall on application, trainer, API, scripts and tests: exit 0.
+  node --check static/app.js: exit 0.
+  node --check extension/popup.js: exit 0.
+  node --check scripts/browser_check.cjs: exit 0.
+  Vercel JSON / Python metadata / required runtime paths: checks passed.
+
+Genuine external blockers:
+  Production Flask/PostgreSQL package install: registry HTTP 403; exit 1.
+  Browser binary absent; Chromium download and browser-check script: exit 1.
+  Full errors are retained, not presented as passing browser checks.
+  No production PostgreSQL credential was used, no malicious site visited,
+  no GitHub Actions run, and no Vercel cloud build/deployment performed.
+  Configure rotated DATABASE_URL + SESSION_SECRET on Vercel, then run live
+  health/smoke checks and the PostgreSQL test before calling it production-ready.
+
+Current run/deploy instructions and component substitutions are in README.md.
+Historical audit logs are not the current product verification.

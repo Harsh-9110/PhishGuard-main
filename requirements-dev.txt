@@ -1,0 +1,3 @@
+# unittest is built into Python and runs all shipped tests without downloads.
+# Optional pytest discovery uses the same unittest cases.
+pytest==8.3.5

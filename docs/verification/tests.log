@@ -1,0 +1,74 @@
+test_legacy_postgres_uri_supported_without_using_credential (test_adapters.AdapterTests.test_legacy_postgres_uri_supported_without_using_credential) ... ok
+test_local_session_key_persists_and_empty_key_fails_closed (test_adapters.AdapterTests.test_local_session_key_persists_and_empty_key_fails_closed) ... ok
+test_missing_serverless_database_fails_closed (test_adapters.AdapterTests.test_missing_serverless_database_fails_closed) ... ok
+test_missing_serverless_secret_fails_closed (test_adapters.AdapterTests.test_missing_serverless_secret_fails_closed) ... ok
+test_real_flask_adapter (test_adapters.AdapterTests.test_real_flask_adapter) ... skipped 'Flask package unavailable under registry restriction; WSGI core tested directly'
+test_database_failure_is_not_reported_as_success (test_api.APITests.test_database_failure_is_not_reported_as_success) ... ok
+test_extension_owner_key_persists_across_popups (test_api.APITests.test_extension_owner_key_persists_across_popups) ... ok
+test_fetch_errors_never_saved (test_api.APITests.test_fetch_errors_never_saved) ... ok
+test_html_form_csrf_and_result_redirect (test_api.APITests.test_html_form_csrf_and_result_redirect) ... ok
+test_http_head (test_api.APITests.test_http_head) ... ok
+test_invalid_json_and_input_types (test_api.APITests.test_invalid_json_and_input_types) ... ok
+test_methods_and_unknown_paths (test_api.APITests.test_methods_and_unknown_paths) ... ok
+test_missing_artifacts_health_and_scan_fail (test_api.APITests.test_missing_artifacts_health_and_scan_fail) ... ok
+test_non_json_and_size_limit (test_api.APITests.test_non_json_and_size_limit) ... ok
+test_origin_restrictions_and_preflight (test_api.APITests.test_origin_restrictions_and_preflight) ... ok
+test_rate_limit (test_api.APITests.test_rate_limit) ... ok
+test_real_phishing_content_overrides_low_url_score (test_api.APITests.test_real_phishing_content_overrides_low_url_score) ... ok
+test_real_prediction_and_history (test_api.APITests.test_real_prediction_and_history) ... ok
+test_routes_assets_and_security_headers (test_api.APITests.test_routes_assets_and_security_headers) ... ok
+test_bad_urls (test_features.FeatureTests.test_bad_urls) ... ok
+test_ip_host_only_not_path (test_features.FeatureTests.test_ip_host_only_not_path) ... ok
+test_legitimate_fixture (test_features.FeatureTests.test_legitimate_fixture) ... ok
+test_normalization (test_features.FeatureTests.test_normalization) ... ok
+test_password_without_form_does_not_invent_a_form (test_features.FeatureTests.test_password_without_form_does_not_invent_a_form) ... ok
+test_phishing_page_evidence (test_features.FeatureTests.test_phishing_page_evidence) ... ok
+test_relative_form_and_base (test_features.FeatureTests.test_relative_form_and_base) ... ok
+test_schema_exact_order (test_features.FeatureTests.test_schema_exact_order) ... ok
+test_script_text_not_tokenized (test_features.FeatureTests.test_script_text_not_tokenized) ... ok
+test_submit_formaction_override (test_features.FeatureTests.test_submit_formaction_override) ... ok
+test_unicode_path_is_transport_safe (test_features.FeatureTests.test_unicode_path_is_transport_safe) ... ok
+test_url_signals (test_features.FeatureTests.test_url_signals) ... ok
+test_full_http_scan_result_and_history (test_http_integration.HTTPIntegrationTests.test_full_http_scan_result_and_history) ... ok
+test_http_invalid_request_and_ssrf (test_http_integration.HTTPIntegrationTests.test_http_invalid_request_and_ssrf) ... ok
+test_runtime_does_not_import_training_stack (test_http_integration.HTTPIntegrationTests.test_runtime_does_not_import_training_stack) ... ok
+test_vercel_http_handler_uses_real_application (test_http_integration.HTTPIntegrationTests.test_vercel_http_handler_uses_real_application) ... ok
+test_documented_startup_and_smoke (test_launch.LaunchTests.test_documented_startup_and_smoke) ... ok
+test_feature_contract (test_models.ModelTests.test_feature_contract) ... ok
+test_missing_and_tampered_artifact (test_models.ModelTests.test_missing_and_tampered_artifact) ... ok
+test_real_three_models (test_models.ModelTests.test_real_three_models) ... ok
+test_recorded_export_parity_and_split (test_models.ModelTests.test_recorded_export_parity_and_split) ... ok
+test_schema_mismatch (test_models.ModelTests.test_schema_mismatch) ... ok
+test_verdict_aggregation (test_models.ModelTests.test_verdict_aggregation) ... ok
+test_deny_private_reserved_and_mapped (test_scraper.ScraperTests.test_deny_private_reserved_and_mapped) ... ok
+test_dns_errors_and_timeout (test_scraper.ScraperTests.test_dns_errors_and_timeout) ... ok
+test_dns_rebinding_on_redirect (test_scraper.ScraperTests.test_dns_rebinding_on_redirect) ... ok
+test_error_cases (test_scraper.ScraperTests.test_error_cases) ... ok
+test_https_downgrade (test_scraper.ScraperTests.test_https_downgrade) ... ok
+test_mixed_dns_answers (test_scraper.ScraperTests.test_mixed_dns_answers) ... ok
+test_nonweb_port (test_scraper.ScraperTests.test_nonweb_port) ... ok
+test_private_redirect_denied (test_scraper.ScraperTests.test_private_redirect_denied) ... ok
+test_real_http_fixture_and_pinning (test_scraper.ScraperTests.test_real_http_fixture_and_pinning) ... ok
+test_redirect_checked_and_content_fetched (test_scraper.ScraperTests.test_redirect_checked_and_content_fetched) ... ok
+test_timeout_and_slow_drip_bound (test_scraper.ScraperTests.test_timeout_and_slow_drip_bound) ... ok
+test_atomic_rate_limit (test_storage.StorageTests.test_atomic_rate_limit) ... ok
+test_bound_parameters (test_storage.StorageTests.test_bound_parameters) ... ok
+test_migration_idempotent_and_connection (test_storage.StorageTests.test_migration_idempotent_and_connection) ... ok
+test_owner_scope_and_persistence (test_storage.StorageTests.test_owner_scope_and_persistence) ... ok
+test_real_postgres_integration (test_storage.StorageTests.test_real_postgres_integration) ... skipped 'No rotated PostgreSQL test database supplied'
+test_rollback_recovers_after_duplicate (test_storage.StorageTests.test_rollback_recovers_after_duplicate) ... ok
+test_serverless_requires_persistent_db (test_storage.StorageTests.test_serverless_requires_persistent_db) ... ok
+test_upgrade_development_rate_column_preserves_data (test_storage.StorageTests.test_upgrade_development_rate_column_preserves_data) ... ok
+
+----------------------------------------------------------------------
+Ran 61 tests in 3.020s
+
+OK (skipped=2)
+
+Documented launch smoke output:
+/healthz 200 132 bytes
+/ 200 2425 bytes
+/static/app.js 200 6590 bytes
+/static/style.css 200 5766 bytes
+/api/model-info 200 942 bytes
+/api/check rejects non-web URL: 400

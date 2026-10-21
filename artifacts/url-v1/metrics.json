@@ -1,0 +1,403 @@
+{
+  "dataset": {
+    "file": "phishing_dataset.csv",
+    "sha256": "7bd6726c6d83d9b2f262f6bb9fde2b952001ee7ca9ca217059c8722dbd637d5c",
+    "source": "https://github.com/GregaVrbancic/Phishing-Dataset",
+    "original_rows": 88647,
+    "removed_exact_duplicates": 1438,
+    "retained_rows": 87209,
+    "selected_features": [
+      "qty_dot_url",
+      "qty_hyphen_url",
+      "qty_underline_url",
+      "qty_slash_url",
+      "qty_questionmark_url",
+      "qty_equal_url",
+      "qty_at_url",
+      "qty_and_url",
+      "qty_exclamation_url",
+      "qty_space_url",
+      "qty_tilde_url",
+      "qty_comma_url",
+      "qty_plus_url",
+      "qty_asterisk_url",
+      "qty_hashtag_url",
+      "qty_dollar_url",
+      "qty_percent_url",
+      "length_url",
+      "qty_dot_domain",
+      "qty_hyphen_domain",
+      "qty_underline_domain",
+      "qty_vowels_domain",
+      "domain_length",
+      "domain_in_ip",
+      "server_client_domain"
+    ],
+    "selected_feature_count": 25,
+    "class_counts": {
+      "0": 56712,
+      "1": 30497
+    },
+    "unique_feature_groups": 25656,
+    "conflicting_label_groups": 1070,
+    "rows_in_conflicting_groups": 41665
+  },
+  "split": {
+    "method": "stratified grouped 5-fold outer split, first fold held out",
+    "seed": 42,
+    "train_rows": 69768,
+    "test_rows": 17441,
+    "test_class_counts": {
+      "0": 11342,
+      "1": 6099
+    },
+    "overlapping_feature_groups": 0,
+    "preprocessing": "none; finite numeric tree inputs",
+    "test_index_sha256": "f1ac36b789388c1b33f4674d31af8c89836a3dc7f802e09283b902ed816db3ed"
+  },
+  "cross_validation": {
+    "folds": 3,
+    "seed": 43,
+    "grouping": "identical selected feature vectors remain in one fold",
+    "models": {
+      "decision_tree": {
+        "folds": [
+          {
+            "accuracy": 0.9127891975574095,
+            "precision": 0.8678153994457164,
+            "recall": 0.8855280954137464,
+            "f1": 0.8765822784810127,
+            "roc_auc": 0.962939371328751,
+            "confusion_matrix": [
+              [
+                14024,
+                1097
+              ],
+              [
+                931,
+                7202
+              ]
+            ]
+          },
+          {
+            "accuracy": 0.9015047291487532,
+            "precision": 0.8529305135951661,
+            "recall": 0.867929168716183,
+            "f1": 0.8603644785762175,
+            "roc_auc": 0.95743941744661,
+            "confusion_matrix": [
+              [
+                13911,
+                1217
+              ],
+              [
+                1074,
+                7058
+              ]
+            ]
+          },
+          {
+            "accuracy": 0.9108110432613744,
+            "precision": 0.8674348089751365,
+            "recall": 0.8793803024714127,
+            "f1": 0.8733667114421785,
+            "roc_auc": 0.9671630445347325,
+            "confusion_matrix": [
+              [
+                14028,
+                1093
+              ],
+              [
+                981,
+                7152
+              ]
+            ]
+          }
+        ],
+        "out_of_fold": {
+          "accuracy": 0.9083677330581356,
+          "precision": 0.862726137233571,
+          "recall": 0.8776129190917288,
+          "f1": 0.8701058577320845,
+          "roc_auc": 0.9626320433915107,
+          "confusion_matrix": [
+            [
+              41963,
+              3407
+            ],
+            [
+              2986,
+              21412
+            ]
+          ]
+        }
+      },
+      "random_forest": {
+        "folds": [
+          {
+            "accuracy": 0.9170895329835728,
+            "precision": 0.872404273196495,
+            "recall": 0.8936431820976269,
+            "f1": 0.8828960155490768,
+            "roc_auc": 0.9729923239879479,
+            "confusion_matrix": [
+              [
+                14058,
+                1063
+              ],
+              [
+                865,
+                7268
+              ]
+            ]
+          },
+          {
+            "accuracy": 0.9058469475494411,
+            "precision": 0.8483001172332942,
+            "recall": 0.8898180029513035,
+            "f1": 0.8685631976953547,
+            "roc_auc": 0.9617405119533514,
+            "confusion_matrix": [
+              [
+                13834,
+                1294
+              ],
+              [
+                896,
+                7236
+              ]
+            ]
+          },
+          {
+            "accuracy": 0.9248301367506665,
+            "precision": 0.8839446782922429,
+            "recall": 0.9037255625230542,
+            "f1": 0.8937256809338522,
+            "roc_auc": 0.9749681964234359,
+            "confusion_matrix": [
+              [
+                14156,
+                965
+              ],
+              [
+                783,
+                7350
+              ]
+            ]
+          }
+        ],
+        "out_of_fold": {
+          "accuracy": 0.9159213392959523,
+          "precision": 0.8680489354941214,
+          "recall": 0.8957291581277154,
+          "f1": 0.8816718441118329,
+          "roc_auc": 0.9697788576563046,
+          "confusion_matrix": [
+            [
+              42048,
+              3322
+            ],
+            [
+              2544,
+              21854
+            ]
+          ]
+        }
+      },
+      "gradient_boosting": {
+        "folds": [
+          {
+            "accuracy": 0.9106390298443279,
+            "precision": 0.853390918641298,
+            "recall": 0.898930284028034,
+            "f1": 0.8755688622754491,
+            "roc_auc": 0.9694580118589752,
+            "confusion_matrix": [
+              [
+                13865,
+                1256
+              ],
+              [
+                822,
+                7311
+              ]
+            ]
+          },
+          {
+            "accuracy": 0.8981943250214961,
+            "precision": 0.837312734082397,
+            "recall": 0.8797343826856862,
+            "f1": 0.8579995202686496,
+            "roc_auc": 0.9592499919688442,
+            "confusion_matrix": [
+              [
+                13738,
+                1390
+              ],
+              [
+                978,
+                7154
+              ]
+            ]
+          },
+          {
+            "accuracy": 0.9146383417906597,
+            "precision": 0.8632710943039471,
+            "recall": 0.8981925488749539,
+            "f1": 0.8803856583308225,
+            "roc_auc": 0.9716807555248436,
+            "confusion_matrix": [
+              [
+                13964,
+                1157
+              ],
+              [
+                828,
+                7305
+              ]
+            ]
+          }
+        ],
+        "out_of_fold": {
+          "accuracy": 0.9078230707487673,
+          "precision": 0.8512884683064169,
+          "recall": 0.8922862529715551,
+          "f1": 0.8713053571071221,
+          "roc_auc": 0.9666230690436783,
+          "confusion_matrix": [
+            [
+              41567,
+              3803
+            ],
+            [
+              2628,
+              21770
+            ]
+          ]
+        }
+      }
+    },
+    "soft_vote": {
+      "accuracy": 0.9141296869625043,
+      "precision": 0.8645094855241792,
+      "recall": 0.8946634970079514,
+      "f1": 0.8793280560758958,
+      "roc_auc": 0.9690904988598903,
+      "confusion_matrix": [
+        [
+          41949,
+          3421
+        ],
+        [
+          2570,
+          21828
+        ]
+      ]
+    },
+    "majority_vote": {
+      "accuracy": 0.9143446852425181,
+      "precision": 0.864330353611265,
+      "recall": 0.8956471841954259,
+      "f1": 0.8797101449275362,
+      "roc_auc": 0.9271116991761574,
+      "confusion_matrix": [
+        [
+          41940,
+          3430
+        ],
+        [
+          2546,
+          21852
+        ]
+      ]
+    }
+  },
+  "aggregation": "majority_vote",
+  "held_out": {
+    "decision_tree": {
+      "accuracy": 0.9164612120864629,
+      "precision": 0.8821205136648008,
+      "recall": 0.8785046728971962,
+      "f1": 0.8803088803088803,
+      "roc_auc": 0.968742501791619,
+      "confusion_matrix": [
+        [
+          10626,
+          716
+        ],
+        [
+          741,
+          5358
+        ]
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.9172639183533055,
+      "precision": 0.8758475944462383,
+      "recall": 0.8894900803410395,
+      "f1": 0.8826161229968275,
+      "roc_auc": 0.9734465230127396,
+      "confusion_matrix": [
+        [
+          10573,
+          769
+        ],
+        [
+          674,
+          5425
+        ]
+      ]
+    },
+    "gradient_boosting": {
+      "accuracy": 0.9103835789232269,
+      "precision": 0.8571653543307086,
+      "recall": 0.8924413838334153,
+      "f1": 0.8744477468069725,
+      "roc_auc": 0.9701488436738098,
+      "confusion_matrix": [
+        [
+          10435,
+          907
+        ],
+        [
+          656,
+          5443
+        ]
+      ]
+    },
+    "ensemble": {
+      "accuracy": 0.9182959692678172,
+      "precision": 0.8770571151984511,
+      "recall": 0.8912936546974914,
+      "f1": 0.8841180775798976,
+      "roc_auc": 0.973154111859543,
+      "confusion_matrix": [
+        [
+          10580,
+          762
+        ],
+        [
+          663,
+          5436
+        ]
+      ]
+    }
+  },
+  "best_single_by_test_f1": "random_forest",
+  "ensemble_beats_best_single_f1": true,
+  "json_export_max_absolute_probability_error": {
+    "decision_tree": 0.0,
+    "random_forest": 6.661338147750939e-16,
+    "gradient_boosting": 2.220446049250313e-16
+  },
+  "artifact_bytes": 1481104,
+  "sklearn_version": "1.8.0",
+  "elapsed_seconds": 18.911420071000066,
+  "limitations": [
+    "Historical 2020 dataset; raw URLs unavailable, no temporal or original-domain split.",
+    "Conflicting labels for identical selected feature profiles are retained and grouped.",
+    "Scores are uncalibrated dataset-based estimates, not guarantees of safety.",
+    "HTML/text evidence is rule-based and is outside held-out ML metrics.",
+    "GradientBoostingClassifier replaces unavailable XGBoost; it is not XGBoost."
+  ]
+}

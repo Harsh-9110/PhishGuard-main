@@ -1,0 +1,32 @@
+# Local credentials; keep only the documented placeholder example.
+.env
+.env.*
+!.env.example
+
+# Virtual environments and caches.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local audit/install files and SQLite state.
+.audit/
+instance/
+*.db
+*.db-journal
+*.log
+
+# Packaging outputs.
+build/
+dist/
+*.egg-info/
+
+.train-venv/
+
+# Intentionally versioned, sanitized execution evidence.
+!docs/verification/*.log
